@@ -42,7 +42,6 @@ export default function CryptoChart() {
 
   const wsRef = useRef<WebSocket | null>(null);
 
-  // Calculate linear regression trend line
   const calculateTrendLine = (data: ChartDataPoint[], currency: 'BTC' | 'ETH'): number[] => {
     const prices = data
       .map((p, i) => ({ x: i, y: p[currency] }))
